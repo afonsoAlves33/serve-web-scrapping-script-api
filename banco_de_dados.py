@@ -11,7 +11,7 @@ class banco_de_dados():
             "UID=sqlroot;"
             "PWD=Google.com;"
         )
-        self.conn = pyodbc.connect(conn_str)
+        self.conn = pyodbc.connect(conn_str, timeout=90)
         self.cursor = self.conn.cursor()
         self.criar_tabela_caso_nao_exista()
 
