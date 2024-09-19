@@ -1,2 +1,3 @@
 venv
-__idea__
+.idea
+__pycache__

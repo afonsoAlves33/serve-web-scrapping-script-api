@@ -5,7 +5,7 @@ import datetime
 class banco_de_dados():
     def __init__(self):
         conn_str = (
-
+            "Driver={ODBC Driver 18 for SQL Server};"
             "Server=hololenstcc.database.windows.net;"
             "Database=free-sql-db;"
             "UID=sqlroot;"
