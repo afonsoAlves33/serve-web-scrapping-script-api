@@ -99,6 +99,19 @@ class banco_de_dados():
         except Exception as e:
             print(f"Erro ao obter o último registro: {e}")
             return None
+        
+    def obter_registros(self):
+        try:
+            sql = """
+                SELECT * FROM Ocorrencias ORDER BY data DESC, hora DESC;
+            """
+            self.cursor.execute(sql)
+            resultado = self.cursor.fetchall()
+            if resultado:
+                return resultado
+            return None
+        except Exception as e:
+            raise 
 
 
 if __name__ == '__main__':  # mudar ordem caso de ruim

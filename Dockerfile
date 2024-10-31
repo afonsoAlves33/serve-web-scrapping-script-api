@@ -47,7 +47,7 @@ RUN apk update && \
 COPY . .
 
 # Expõe a porta
-EXPOSE 9000
+EXPOSE 4500
 
 # Comando para iniciar a aplicação
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "9000", "--reload"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "4500", "--reload"]
